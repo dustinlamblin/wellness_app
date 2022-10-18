@@ -1,0 +1,8 @@
+matplotlib==3.5.1
+numpy
+optuna
+pandas
+sklearn
+seaborn
+shap
+streamlit
