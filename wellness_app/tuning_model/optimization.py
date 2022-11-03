@@ -33,6 +33,12 @@ def tuning_hyperparamter(input_data):
     rf_random.fit(X_train, y_train)
     
 def fit_simple_random_forest(input_data):
+    """
+        Please note: 
+            This is bad ML practice to train on the entire universe, it is done here for exemple purposes because dataset is small.  
+            With proper dataset, please split your data between training, validation and test set.  
+            Train on the train set, validate and fine tune on validation set before putting it to the final test on the test set.
+    """
     X_train, y_train, X_test, y_test=prepare_datasets(input_data)
     rf_clf=RandomForestClassifier(max_depth=5,class_weight="balanced")
     return rf_clf.fit(X_train,y_train)
